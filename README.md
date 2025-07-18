@@ -143,12 +143,14 @@ W celu ułatwienia poruszania się między widokami raportu, zastosowano nawigat
 ##  Podgląd dashboardów
 
 <p align="center">
-  <img src="dashboard_1.png" width="45%" style="margin: 5px;">
-  <img src="dashboard_2.png" width="45%" style="margin: 5px;"><br>
-  <img src="dashboard_3.png" width="45%" style="margin: 5px;">
-  <img src="dashboard_4.png" width="45%" style="margin: 5px;"><br>
+  <img src="dashboard_1.png" width="45%" style="margin: 5px;"><br>
+  <img src="dashboard_2a.png" width="45%" style="margin: 5px;">   
+  <img src="dashboard_2b.png" width="45%" style="margin: 5px;">
+  <img src="dashboard_2c.png" width="45%" style="margin: 5px;">    
+  <img src="dashboard_3.png" width="45%" style="margin: 5px;"><br>
+  <img src="dashboard_4.png" width="45%" style="margin: 5px;">
   <img src="dashboard_5.png" width="45%" style="margin: 5px;">
-  <img src="dashboard_6.png" width="45%" style="margin: 5px;"><br>
+  <img src="dashboard_6.png" width="45%" style="margin: 5px;">
   <img src="dashboard_7.png" width="45%" style="margin: 5px;">
 </p>
 
