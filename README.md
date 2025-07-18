@@ -18,15 +18,18 @@ Przedstawienie globalnych różnic w zakresie zdrowia psychicznego, ze szczegól
 1. Ładowanie danych
 2. Czyszczenie danych (usuwanie pustych wierszy, ujednolicanie formatu danych)
 3. Przygotowanie tabel pomocniczych
-4. Utworzenie miar i parametrów    
-5. Projektowanie interaktywnych dashboardów zawierających m.in.:
+4. Utworzenie miar i parametrów
+5. Modelowanie danych 
+6. Projektowanie interaktywnych dashboardów zawierających m.in.:
       - dynamiczne filtry,
       - parametry,
       - zakładki,
       - animowana oś odtwarzania (trend czasowy),
       - podpowiedzi kontekstowe (tooltips).
 
-## Modelowanie danych
+##  Modelowanie danych
+### ✏️ Struktura modelu danych
+Model danych składa się z tabel faktów (Depresja, Samobójstwa, Szczęście) oraz tabel wymiarów (Geografia, Kalendarz), powiązanych relacjami wiele-do-jednego.
 
 ### ✅ Tabela kalendarza
  Stworzenie tabeli kalendarza - aby zapewnić prawidłowe filtrowanie i analizę opartą na czasie, utworzono dedykowaną tabelę kalendarza przy użyciu języka DAX:
@@ -44,9 +47,10 @@ Rok = YEAR('Kalendarz'[Data_Kalendarz])
    <p align="center">
   <img src="screenshot_kalendarz.png" width="50%" />
 </p>
-### 🔢 Miary 
 
-Przykładowa miara wykorzystana w KPI na temat globalnej liczby osób z depresją w 2020 roku:
+### 🔢 Miary
+
+Przykładowa miara wykorzystana w karcie na temat globalnej liczby osób z depresją w 2020 roku:
 ```dax
 Globalna_liczba_osob_z_depresja_2020 = 
 CALCULATE(
@@ -104,7 +108,7 @@ Wykorzystane wizualizacje:
 - macierze top krajów z flagami,
 - mapy,
 - miernik,
-- karty(KPI),
+- karty,
 - formatowanie warunkowe macierzy,
 - wykresy liniowe, punktowe, słupkowe.
 
@@ -156,7 +160,9 @@ Dashboardy przekazują następujące informacje:
 
 ## Podsumowanie
 
-## Wyzwania i 
+## Wyzwania w projekcie
+Projekt 
+
 ## Pliki repozytorium
 
 
