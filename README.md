@@ -19,7 +19,7 @@ Przedstawienie globalnych różnic w zakresie zdrowia psychicznego, ze szczegól
 2. Czyszczenie danych (usuwanie pustych wierszy, ujednolicanie formatu danych)
 3. Przygotowanie tabel pomocniczych
 4. Utworzenie miar i parametrów
-5. Modelowanie danych 
+5. Ustalanie modelu danych 
 6. Projektowanie interaktywnych dashboardów zawierających m.in.:
       - dynamiczne filtry,
       - parametry,
@@ -27,12 +27,23 @@ Przedstawienie globalnych różnic w zakresie zdrowia psychicznego, ze szczegól
       - animowana oś odtwarzania (trend czasowy),
       - podpowiedzi kontekstowe (tooltips).
 
+
+
 ##  Modelowanie danych
 ### ✏️ Struktura modelu danych
-Model danych składa się z tabel faktów (Depresja, Samobójstwa, Szczęście) oraz tabel wymiarów (Geografia, Kalendarz), powiązanych relacjami wiele-do-jednego.
+Model danych składa się z tabel faktów (Depresja, Samobójstwa, Szczęście) oraz tabel wymiarów (Geografia, Kalendarz), powiązanych relacjami wiele-do-jednego. Odpowiedni typ relacji ma za zadanie utrzymanie:
+ - prawidłowego filtrowania danych przy pomocy slicerów,
+ - odpowiedniej agregacji wskaźników w zależności od wybranego kraju lub roku,
+ - zapewnienia spójności między wizualizacjami.
 
-### ✅ Tabela kalendarza
- Stworzenie tabeli kalendarza - aby zapewnić prawidłowe filtrowanie i analizę opartą na czasie, utworzono dedykowaną tabelę kalendarza przy użyciu języka DAX:
+ Screenshot modelu:
+   <p align="center">
+  <img src="screenshot_model-danych.png" width="50%" />
+</p>
+
+
+### ✅ Tabele pomocnicze - Tabela kalendarza
+Utworzenie dedykowanej tabeli kalendarza przy użyciu języka DAX, miało na celu umożliwienie bardziej zaawansowanej analizy opartej na czasie, np. filtrowanie danych według lat, użycie parametrów czy animowanej osi odtwarzania (Play Axis):
 
 ```dax
 Kalendarz = CALENDAR(DATE(1970,1,1), DATE(2024,12,31))
@@ -132,9 +143,13 @@ W celu ułatwienia poruszania się między widokami raportu, zastosowano nawigat
 ##  Podgląd dashboardów
 
 <p align="center">
-  <img src="dashboard1.png" width="30%" />
-  <img src="dashboard2.png" width="30%" />
-  <img src="dashboard3.png" width="30%" />
+  <img src="dashboard_1.png" width="45%" style="margin: 5px;">
+  <img src="dashboard_2.png" width="45%" style="margin: 5px;"><br>
+  <img src="dashboard_3.png" width="45%" style="margin: 5px;">
+  <img src="dashboard_4.png" width="45%" style="margin: 5px;"><br>
+  <img src="dashboard_5.png" width="45%" style="margin: 5px;">
+  <img src="dashboard_6.png" width="45%" style="margin: 5px;"><br>
+  <img src="dashboard_7.png" width="45%" style="margin: 5px;">
 </p>
 
 
